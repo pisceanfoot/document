@@ -4,3 +4,4 @@
 1. Open Source
 	- Redis
 	- Memcached
+	- Cassandra
