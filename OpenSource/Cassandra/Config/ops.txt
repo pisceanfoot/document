@@ -1,0 +1,4 @@
+chown -R opscenter-agent:opscenter-agent "/var/lib/opscenter-agent" "/var/log/opscenter-agent"
+
+
+

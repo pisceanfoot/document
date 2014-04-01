@@ -1,0 +1,30 @@
+JAVA_HOME=/usr/java/jdk1.6.0_33
+PATH=$PATH:$JAVA_HOME/bin
+
+Unistall open jdk
+yum remove java-*
+
+# After the script is created as /etc/init.d/cassandra, and
+# made executable with
+chmod +x /etc/init.d/cassandra
+# start and stop Cassandra with
+ 
+service cassandra start
+service cassandra stop
+ 
+# To bring cassandra alive after rebooting:
+ 
+chmod +x /etc/init.d/cassandra
+chkconfig --add cassandra
+chkconfig cassandra on
+
+java
+path
+
+rpm -ivh ***.rpm
+
+172.20.0.1    CASSANDRA_LISTENING_ADDRESS
+172.20.0.1    CASSANDRA_THRIFT_ADDRESS
+
+service cassandra stop
+service cassandra start
