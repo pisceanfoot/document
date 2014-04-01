@@ -169,7 +169,18 @@ service cassandra stop # 停止服务
 ### 检查防火墙
 ```
 >vi /etc/sysconfig/iptables
+iptables -A INPUT -p tcp -m tcp --dport 7000 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 7001 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 9042 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 9160 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 7199 -j ACCEPT
+
+# JVM 因为是主动开端口(port>1024)，不在内，建议对特定服务器开放
+# 添加完毕后重启服务使生效
+```
+
 如果不需要可直接关闭
+```
 >service iptables stop
 >chkconfig --del iptables
 ```
