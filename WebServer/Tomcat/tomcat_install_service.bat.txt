@@ -1,0 +1,13 @@
+echo off
+rem 获取当前路径
+set CURRENT_DIR=%cd%
+set CURRENT_EXE=%cd%\tomcat7.exe
+set WORK_PATH=%cd:~0,-4%
+
+tomcat7 //IS//Tomcat7 --DisplayName="Apache Tomcat 7" --Description="Apache Tomcat 7.0.11 Server - http://tomcat.apache.org/" --Install="%CURRENT_EXE%" --StartPath="%WORK_PATH%" --Startup=auto --LogLevel=error --LogPath="%WORK_PATH%\logs" --LogPrefix=commons-daemon --StdOutput=auto --StdError=auto --Jvm=auto --StartMode=jvm --StopMode=jvm --StartClass=org.apache.catalina.startup.Bootstrap --StartParams=start --StopClass=org.apache.catalina.startup.Bootstrap --StopParams=stop --StopPath="%WORK_PATH%" --JvmMs=512 --JvmMx=2560 --JvmOptions="-Dcatalina.home=%WORK_PATH%;-Dcatalina.base=%WORK_PATH%;-Djava.endorsed.dirs=%WORK_PATH%\endorsed;-Djava.io.tmpdir=%WORK_PATH%\temp;-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager;-Djava.util.logging.config.file=%WORK_PATH%\conf\logging.properties" --Classpath="%CURRENT_DIR%\bootstrap.jar;%CURRENT_DIR%\tomcat-juli.jar"
+
+echo on
+echo "done"
+echo "start tomcat7 service ..."
+net start tomcat7
+pause
