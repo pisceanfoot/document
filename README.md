@@ -7,3 +7,5 @@
 	- Cassandra
 2. WebServer
 	- Tomcat
+3. Chrome
+	- Extension
