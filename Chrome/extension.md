@@ -122,6 +122,20 @@ Page Content 是 inject 在 Page 中执行的，调试自已是 F12 Console调�
 	![danci option](images/danci_option.png)
 
 
+如何学习别人的插件
+-----------------------
+- 安装插件，右上角右键
+	![learn step2](images/learn_step1.png)
+- 查找插件唯一编号或插件管理里面查找
+	![learn step2](images/learn_step2.png)
+- 进入插件安装目录
+	C:\Users\{用户名}\AppData\Local\Google\Chrome\User Data\Default\Extensions
+	*如果是多用户模式，进入安装用户目录*
+
+插件的代码都在里面
+
+
+
 参考资料
 -----------------------
 [Getting Started: Building a chrome extension](https://developer.chrome.com/extensions/getstarted)
