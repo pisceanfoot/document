@@ -1,0 +1,105 @@
+function regExpMatch(url, pattern) {
+	try { return new RegExp(pattern).test(url); } catch(ex) { return false; }
+}
+// SSFIREWALL
+
+function FindProxyForURL(url, host) {
+	var LocalProxy = 'PROXY localhost:8060';
+	var FiddlerProxy = 'PROXY localhost:8888';
+	var SHPROXY = 'PROXY SHPROXY:8080';
+	var STPROXY = 'PROXY STPROXY:8080';
+	var SSPROXY = 'PROXY SSPROXY:8080';
+	var S7TMG02 = 'PROXY S7TMG02:8080';
+	var TESTPROXY = 'PROXY 10.16.50.188:8080';
+
+	var PRD_TEST = 'PROXY 127.0.0.1:9999';
+
+
+       var urllower = url.toLowerCase();
+       if((urllower.substring(0,5)=="rtsp:") ||
+	   (urllower.substring(0,6)=="rtspt:") ||
+	   (urllower.substring(0,6)=="rtspu:") ||
+	   (urllower.substring(0,4)=="mms:") ||
+	   (urllower.substring(0,5)=="mmst:") ||
+	   (urllower.substring(0,5)=="mmsu:")){
+		if (regExpMatch(url, 'enmms\.chinabroadcast\.cn')) return SSPROXY ;	
+		else  return S7TMG02;
+	}
+
+	if (regExpMatch(url, 'cm\.newegg\.com\.cn')) return 'PROXY 127.0.0.1:9999';
+	if (regExpMatch(url, '127\.0\.0\.1')) return 'DIRECT';
+	if (regExpMatch(url, 'localhost|.cn.local')) return 'DIRECT';
+    if (regExpMatch(url, '\d\.newegg\.cn')) return 'DIRECT';
+    if (regExpMatch(url, '\d\.newegg\.com\.cn')) return 'DIRECT';
+
+	if (regExpMatch(url, 'intranet')) return 'DIRECT';
+	if (regExpMatch(url, 'newegg\d')) return 'DIRECT';
+	if (regExpMatch(url, '\.neweggimages\.cn\.sh')) return 'DIRECT';
+	if (regExpMatch(url, '\.neweggimages\.com\.cn')) return 'DIRECT';
+	if (regExpMatch(url, 'cn.sh|cn.qa|ipp')) return 'DIRECT';
+	
+	if (regExpMatch(url, 'tudou\.com')) return SHPROXY;
+	if (regExpMatch(url, 'youku\.com')) return SHPROXY;
+	if (regExpMatch(url, 'v.163.com')) return SHPROXY;
+
+	if (regExpMatch(url, 'newegg\.cn')) return SSPROXY;
+
+	if (regExpMatch(url, '.+2\.newegg\.com\.cn')) return STPROXY;
+	if (regExpMatch(url, 'doubleclick')) return SSPROXY;
+	if (regExpMatch(url, 'sinaimg\.cn')) return SSPROXY;
+
+	if (regExpMatch(url, '180\.169\.')) return 'DIRECT';
+	if (regExpMatch(url, 'Crl2006')) return 'DIRECT';
+	if (regExpMatch(url, '10\.16\.')) return 'DIRECT';
+
+
+	if (regExpMatch(url, 'mail\.google\.com')) return S7TMG02;
+	if (regExpMatch(url, 'mail-archives\.apache\.org')) return S7TMG02;
+	if (regExpMatch(url, 'i3\.sinaimg\.cn')) return S7TMG02;
+	if (regExpMatch(url, 'news\.sina\.com\.cn')) return S7TMG02;
+	if (regExpMatch(url, 'auto\.sina\.com\.cn')) return S7TMG02;
+	if (regExpMatch(url, 'tools\.google\.com')) return S7TMG02;
+
+	if (regExpMatch(url, 'mail-archive\.com')) return S7TMG02;
+	if (regExpMatch(url, 'slideshare\.net')) return S7TMG02;
+	if (regExpMatch(url, 'geekswithblogs\.net')) return S7TMG02;
+	if (regExpMatch(url, 'fastly\.net')) return S7TMG02;
+	if (regExpMatch(url, 'baidupcs\.com')) return S7TMG02;
+
+	if (regExpMatch(url, '\.taobao\.com')) return SSPROXY;
+	if (regExpMatch(url, '\.tmall\.com')) return SSPROXY;
+	if (regExpMatch(url, 'google\.com\.hk')) return SSPROXY;
+
+	if (regExpMatch(url, 'gmail|mail\.google')) return 'DIRECT';
+	if (regExpMatch(url, 'mail\.sina\.com\.cn')) return 'DIRECT';
+	if (regExpMatch(url, 'newegg\.com\.cn')) return 'DIRECT';
+
+	if (regExpMatch(url, '(mars.corp)|(mistfs)|ssvos01')) return 'DIRECT';
+	if (regExpMatch(url, 'tenpay.com')) return 'DIRECT';
+	if (regExpMatch(url, 'slideshare')) return 'DIRECT';
+	if (regExpMatch(url, 'fbcdn')) return 'DIRECT';
+	
+	if (regExpMatch(url, 'docs\.google\.com')) return FiddlerProxy;
+	if (regExpMatch(url, 'gaopeng')) return LocalProxy;
+	if (regExpMatch(url, 'douban')) return LocalProxy;
+
+	if (regExpMatch(url, 'gtimg\.com')) return SSPROXY;
+	if (regExpMatch(url, 'wordpress.com')) return STPROXY;
+	if (regExpMatch(url, 'qq')) return STPROXY;
+	if (regExpMatch(url, 'translate\.google\.cn')) return STPROXY
+	if (regExpMatch(url, 'google\.com|sites.google.com')) return STPROXY;
+	if (shExpMatch(url, '*://appengine.google.com/*')) return STPROXY;
+	if (regExpMatch(url, 'infoq')) return STPROXY;
+	if (regExpMatch(url, 'blogspot')) return STPROXY;
+	if (regExpMatch(url, 'facebook')) return SSPROXY;
+	if (regExpMatch(url, 'youku')) return STPROXY;
+	if (regExpMatch(url, '\.tw')) return STPROXY;
+	if (regExpMatch(url, 'pan\.baidu\.com')) return SHPROXY;
+	
+	if (regExpMatch(url, 'youtube\.com')) return SHPROXY;
+	if (regExpMatch(url, 'ytimg\.com')) return SHPROXY;
+	if (regExpMatch(url, 'qd\.cache\.baidupcs\.com')) return SHPROXY;
+	
+
+	return STPROXY;
+}
