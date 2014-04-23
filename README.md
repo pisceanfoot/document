@@ -9,3 +9,5 @@
 	- Tomcat
 3. Chrome
 	- Extension
+4. Proxy
+	- PAC File
