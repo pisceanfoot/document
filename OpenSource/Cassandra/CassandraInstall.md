@@ -43,7 +43,8 @@ PATH=$PATH:$JAVA_HOME/bin
 ```
 
 ### 配置 CASSANDRA
-1. vi etc/cassandra.yaml
+Cassandra 安装目录下执行修改
+1. vi conf/cassandra.yaml
 	- cluster_name: 集群命名 
 	- initial_token：可留空 
 	- seeds：seed服务器 
