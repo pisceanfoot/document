@@ -11,6 +11,7 @@ VS 快捷键设置
 ----------------------
 - File.Close
 - File.CloseAllButThis
+- Window.CloseAllDocuments
 
 智能提示
 ----------------------
