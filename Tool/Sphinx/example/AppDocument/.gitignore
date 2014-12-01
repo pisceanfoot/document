@@ -1,0 +1,4 @@
+# git ignore file
+build/*
+project.sublime-project
+project.sublime-workspace

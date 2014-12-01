@@ -1,0 +1,30 @@
+.. AppRestfulService documentation master file, created by
+   sphinx-quickstart on Mon Mar 31 17:25:12 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Newegg Restful Service Interface
+=============================================
+
+目录:
+
+.. toctree::
+   :maxdepth: 3
+
+   www/index
+
+..   ssl/index
+
+..   service/index
+
+
+测试环境
+==================
+* GDEV
+* GQC
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

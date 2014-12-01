@@ -1,0 +1,18 @@
+.. AppRestfulService documentation master file, created by
+   sphinx-quickstart on Mon Mar 31 17:25:12 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+HomePage
+=============================================
+.. toctree::
+	:maxdepth: 1
+
+	HomePage/GetBannerInfo
+	HomePage/HomeV1
+	HomePage/Home
+	HomePage/Promotion
+	HomePage/MyFocusProducts
+	HomePage/RecProducts
+	HomePage/GroupBuying
+	HomePage/SuperSale
