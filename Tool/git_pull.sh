@@ -25,6 +25,8 @@ do
 	echo 'dir ' $dir1
 	if [ -d "$dir1/.git" ];then
 		git_pull $dir1
+	else
+		echo 'pass'
 	fi
 done
 echo "All of the repositories have been updated."
