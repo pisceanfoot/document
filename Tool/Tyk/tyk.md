@@ -13,11 +13,18 @@ docker pull tykio/tyk-gateway
 ## run
 
 ```
+docker run -d --name tyk_redis redis
+
+
+```
+
+```
 docker run --rm --name tyk_gateway -p 8080:8080 --link tyk_redis:redis -v $(pwd)/tyk.standalone.conf:/opt/tyk-gateway/tyk.conf -v $(pwd)/apps:/opt/tyk-gateway/apps   -v $(pwd)/policies:/opt/tyk-gateway/policies tykio/tyk-gateway
 ```
 
 ## create api
 
+https://tyk.io/docs/tyk-gateway-api/
 https://tyk.io/docs/tyk-gateway-api/api-definition-objects/
 
 ```
