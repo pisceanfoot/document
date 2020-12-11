@@ -44,3 +44,7 @@ helm repo add name url
 helm search repo **
 helm search hub **
 ```
+
+# Others Tools
+
+- kustomize

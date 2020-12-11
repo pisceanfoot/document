@@ -20,6 +20,12 @@ kubectl logs <pod-name> <container-name>
 kubectl describe pod/container | grep Failed
 ```
 
+### Events
+
+```
+kubectl get events
+```
+
 ### Busybox pod
 
 ```
