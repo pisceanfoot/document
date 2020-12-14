@@ -46,3 +46,9 @@ kubectl rollout undo deployment guestbook
 kubectl delete deployment guestbook
 kubectl delete service guestbook
 ```
+
+# Referece
+
+[kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+[kubectl command overview](https://kubernetes.io/docs/reference/kubectl/overview/)
+[kubectl command detail](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-)
