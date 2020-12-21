@@ -52,3 +52,4 @@ kubectl delete service guestbook
 [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 [kubectl command overview](https://kubernetes.io/docs/reference/kubectl/overview/)
 [kubectl command detail](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-)
+[kubectl sheet](https://github.com/eon01/kubectl-SheetCheat)
