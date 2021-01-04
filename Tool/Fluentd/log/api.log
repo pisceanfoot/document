@@ -1,0 +1,15 @@
+[2020-10-14T12:04:32.916+0800] [INFO] [default] - ::ffff:127.0.0.1 - - "POST /web/user/profile HTTP/1.1" 200 2.47kb "undefined" "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.03.2005140 MicroMessenger/7.0.4 Language/zh_CN webview/20708_206 webdebugger miniprogramhtmlwebview miniProgram port/43191" -body- {} -params- {} -cookie- wx_au_type=fake; admin_mojavi=0jjfaknqntcueomt698jl30f6l; c_uid=5f0294e9bc08ca4e4c048087; wx_au_v3=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI1ZjAyOTRlOWJjMDhjYTRlNGMwNDgwODciLCJvcGVuSWQiOiJvcGR4ODVmLVQ0Z3QzcWRQTi1aMVJQRkdZdGVFIiwibm93IjoxNjAyNjQ4MjE1NDk2LCJmcm9tQXBwIjoid3hhcHBfc29jaWFsIn0.L8LbQ5FbJCIdOn8WWdgvStpQIG3gJ6AiiJE9e6h2Bp8 logname: web
+[2020-10-14T12:04:33.067+0800] [ERROR] [default] - wechat api error {
+  errcode: 41030,
+  errmsg: 'invalid page rid: 5f8678d0-117d0487-6850b0fc'
+} logname: wechatApi
+[2020-10-14T12:04:33.068+0800] [ERROR] [default] - cache loader exception WX_TMPQRCODE_mp_product-_-23-_-5ddcce3f35e31bc853e13a04-_- Exception {
+  code: -2,
+  message: 'invalid page rid: 5f8678d0-117d0487-6850b0fc',
+  data: {
+    errcode: 41030,
+    errmsg: 'invalid page rid: 5f8678d0-117d0487-6850b0fc'
+  },
+  title: undefined
+} logname: cache_util
+[2020-12-25T15:40:41.119+0800] [DEBUG] [default] - qrcode
