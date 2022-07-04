@@ -1,0 +1,5 @@
+architecture: replicaset
+useStatefulSet: true
+auth:
+  rootUser: ugc
+  rootPassword: z6Y0Ky0Jq8c5

@@ -1,0 +1,25 @@
+sysctlInitContainer:
+  enabled: false
+
+antiAffinity: "soft"
+minimumMasterNodes: 1
+replicas: 1
+esJavaOpts: "-Xms256m -Xmx256m"
+
+clusterName: "elasticsearch"
+
+nodeGroup: "master"
+
+resources:
+  requests:
+    cpu: "200m"
+    memory: "1Gi"
+# extraInitContainers:
+#   - name: ulimit
+#     image: busybox
+#     command: ["sysctl", "-w", "fs.file-max=65536"]
+#     securityContext:
+#       privileged: true
+# esConfig:
+#   elasticsearch.yml: |
+#     node.store.allow_mmap: false
